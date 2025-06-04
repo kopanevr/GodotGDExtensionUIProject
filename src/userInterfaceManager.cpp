@@ -12,9 +12,9 @@ void UserInterfaceManager::_body(double delta)
  */
 void UserInterfaceManager::setMenu()
 {
-    static EMenus previousMenuIdentifier = menuIdentifier;
+    static EMenus previousMenuIdentifier = EMenus::MENU_DEF;
 
-    if (menuIdentifier == previousMenuIdentifier){ return; }
+    if (menuIdentifier == previousMenuIdentifier) { return; }
 
     previousMenuIdentifier = menuIdentifier;
 

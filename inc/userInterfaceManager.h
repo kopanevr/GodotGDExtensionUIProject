@@ -12,7 +12,9 @@ enum class EMenus : uint8_t
     MENU_0 = 1U,
     MENU_1
 
-    // , MENUS_NUM
+    // , MENU_NUM
+
+    , MENU_DEF
 };
 
 class UserInterfaceManager final : public Manager

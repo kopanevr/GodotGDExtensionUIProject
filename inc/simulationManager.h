@@ -9,7 +9,7 @@
 class SimulationManager final : public Manager
 {
 private:
-    std::vector<std::unique_ptr<Manager>> managers;
+    std::vector<std::unique_ptr<Manager>> processManagers;
 private:
     void _body(
 #if __cplusplus >= 201703L

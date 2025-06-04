@@ -7,7 +7,7 @@
  */
 void SimulationManager::_body(double delta)
 {
-    for (const std::unique_ptr<Manager>& e : managers) { e->run(delta); }
+    for (const std::unique_ptr<Manager>& e : processManagers) { e->run(delta); }
 }
 
 /**
@@ -15,7 +15,7 @@ void SimulationManager::_body(double delta)
  */
 SimulationManager::SimulationManager()
 {
-    managers.push_back(std::make_unique<UserInterfaceManager>());
+    processManagers.push_back(std::make_unique<UserInterfaceManager>());
 }
 
 /**
@@ -32,7 +32,7 @@ void SimulationManager::startUp()
 {
     startUpFlag = true;
 
-    for (const std::unique_ptr<Manager>& e : managers) { e->startUp(); }
+    for (const std::unique_ptr<Manager>& e : processManagers) { e->startUp(); }
 }
 
 /**
@@ -40,7 +40,7 @@ void SimulationManager::startUp()
  */
 void SimulationManager::shutDown()
 {
-    for (const std::unique_ptr<Manager>& e : managers) { e->shutDown(); }
+    for (const std::unique_ptr<Manager>& e : processManagers) { e->shutDown(); }
 
     startUpFlag = false;
 }
