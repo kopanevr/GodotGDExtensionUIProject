@@ -3,7 +3,7 @@
 /**
  * @brief
  */
-void UserInterfaceManager::_body([[maybe_unused]] double delta)
+void UserInterfaceManager::_body(double delta)
 {
 }
 
@@ -74,7 +74,7 @@ void UserInterfaceManager::shutDown()
 /**
  * @brief
  */
-void UserInterfaceManager::run([[maybe_unused]] double delta)
+void UserInterfaceManager::run(double delta)
 {
     if (startUpFlag == false) { return; }
 

@@ -5,9 +5,9 @@
 /**
  * @brief
  */
-void SimulationManager::_body([[maybe_unused]] double delta)
+void SimulationManager::_body(double delta)
 {
-    for (const std::unique_ptr<Manager>& e : pManagers) { e->run(delta); }
+    for (const std::unique_ptr<Manager>& e : managers) { e->run(delta); }
 }
 
 /**
@@ -15,7 +15,7 @@ void SimulationManager::_body([[maybe_unused]] double delta)
  */
 SimulationManager::SimulationManager()
 {
-    pManagers.push_back(std::make_unique<UserInterfaceManager>());
+    managers.push_back(std::make_unique<UserInterfaceManager>());
 }
 
 /**
@@ -32,7 +32,7 @@ void SimulationManager::startUp()
 {
     startUpFlag = true;
 
-    for (const std::unique_ptr<Manager>& e : pManagers) { e->startUp(); }
+    for (const std::unique_ptr<Manager>& e : managers) { e->startUp(); }
 }
 
 /**
@@ -40,7 +40,7 @@ void SimulationManager::startUp()
  */
 void SimulationManager::shutDown()
 {
-    for (const std::unique_ptr<Manager>& e : pManagers) { e->shutDown(); }
+    for (const std::unique_ptr<Manager>& e : managers) { e->shutDown(); }
 
     startUpFlag = false;
 }
@@ -48,7 +48,7 @@ void SimulationManager::shutDown()
 /**
  * @brief
  */
-void SimulationManager::run([[maybe_unused]] double delta)
+void SimulationManager::run(double delta)
 {
     if (startUpFlag == false) { return; }
 

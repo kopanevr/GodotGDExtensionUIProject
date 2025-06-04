@@ -14,9 +14,18 @@ class GDextension_class final : public godot::Node
 private:
     std::unique_ptr<Manager> pSimulationManager;
 private:
-    void _body([[maybe_unused]] double delta);
+    void _body(
+#if __cplusplus >= 201703L
+    [[maybe_unused]]
+#endif
+    double delta);
 
-    void _progress([[maybe_unused]] double delta);
+    void _progress(
+#if __cplusplus >= 201703L
+    [[maybe_unused]]
+#endif
+    double delta);
+
     void _ready();
     void _exit_tree();
 public:

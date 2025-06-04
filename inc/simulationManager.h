@@ -9,14 +9,23 @@
 class SimulationManager final : public Manager
 {
 private:
-    std::vector<std::unique_ptr<Manager>> Managers;
+    std::vector<std::unique_ptr<Manager>> managers;
 private:
-    void _body([[maybe_unused]] double delta);
+    void _body(
+#if __cplusplus >= 201703L
+    [[maybe_unused]]
+#endif
+    double delta);
 public:
     SimulationManager();
     ~SimulationManager();
 
     void startUp() override;
     void shutDown() override;
-    void run([[maybe_unused]] double delta) override;
+
+    void run(
+#if __cplusplus >= 201703L
+    [[maybe_unused]]
+#endif
+    double delta) override;
 };

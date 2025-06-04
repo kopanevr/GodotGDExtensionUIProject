@@ -19,7 +19,11 @@ class UserInterfaceManager final : public Manager
 {
 private:
 private:
-    void _body([[maybe_unused]] double delta);
+    void _body(
+#if __cplusplus >= 201703L
+    [[maybe_unused]]
+#endif
+    double delta);
 
     void setMenu();
 private:
@@ -36,5 +40,10 @@ public:
 
     void startUp() override;
     void shutDown() override;
-    void run([[maybe_unused]] double delta) override;
+
+    void run(
+#if __cplusplus >= 201703L
+    [[maybe_unused]]
+#endif
+    double delta) override;
 };

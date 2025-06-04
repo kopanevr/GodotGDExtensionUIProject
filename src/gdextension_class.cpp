@@ -5,15 +5,15 @@
 /**
  * @brief
  */
-void GDextension_class::_body([[maybe_unused]] double delta)
+void GDextension_class::_body(double delta)
 {
-    if (simulationManager.get() != nullpr) { pSimulationManager->run(delta); }
+    if (pSimulationManager.get() != nullptr) { pSimulationManager->run(delta); }
 }
 
 /**
  * @brief
  */
-void GDextension_class::_progress([[maybe_unused]] double delta)
+void GDextension_class::_progress(double delta)
 {
     _body(delta);
 }
@@ -23,7 +23,7 @@ void GDextension_class::_progress([[maybe_unused]] double delta)
  */
 void GDextension_class::_ready()
 {
-    if (pSimulationManager.get() != nullpr) { pSimulationManager->startUp(); }
+    if (pSimulationManager.get() != nullptr) { pSimulationManager->startUp(); }
 }
 
 /**
@@ -31,7 +31,7 @@ void GDextension_class::_ready()
  */
 void GDextension_class::_exit_tree()
 {
-    if (pSimulationManager.get() != nullpr) { pSimulationManager->shutDown(); }
+    if (pSimulationManager.get() != nullptr) { pSimulationManager->shutDown(); }
 }
 
 /**
