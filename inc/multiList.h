@@ -13,4 +13,15 @@ private:
 public:
     MultiList();
     ~MultiList();
+
+#if __cplusplus >= 201703L
+    [[nodiscard]]
+#endif
+    std::shared_ptr<Node<T, maxDegree>> addNode(T data);
+
+#if __cplusplus >= 201703L
+    [[nodiscard]]
+#endif
+    bool addEdge(std::shared_ptr<Node<T, maxDegree> firstNode, std::shared_ptr<Node<T, maxDegree> secomdNode);
+    void removeEdge(std::shared_ptr<Node<T, maxDegree> firstNode, std::shared_ptr<Node<T, maxDegree> secomdNode);
 };
