@@ -22,6 +22,25 @@ public:
 #if __cplusplus >= 201703L
     [[nodiscard]]
 #endif
-    bool addEdge(std::shared_ptr<Node<T, maxDegree> firstNode, std::shared_ptr<Node<T, maxDegree> secomdNode);
-    void removeEdge(std::shared_ptr<Node<T, maxDegree> firstNode, std::shared_ptr<Node<T, maxDegree> secomdNode);
+    bool addEdge(std::shared_ptr<Node<T, maxDegree> firstNode, std::shared_ptr<Node<T, maxDegree> secondNode);
+    void removeEdge(std::shared_ptr<Node<T, maxDegree> firstNode, std::shared_ptr<Node<T, maxDegree> secondNode);
 };
+
+/**
+ * @brief
+ */
+template<typename T, uint8_t maxDegree>
+bool MultiList<T, maxDegree>::addEdge(std::shared_ptr<Node<T, maxDegree> firstNode, std::shared_ptr<Node<T, maxDegree> secondNode)
+{
+    if (firstNode == nullptr || secondNode == nullptr) { return false; }
+
+    return true;
+}
+
+/**
+ * @brief
+ */
+template<typename T, uint8_t maxDegree>
+void MultiList<T, maxDegree>::removeEdge(std::shared_ptr<Node<T, maxDegree> firstNode, std::shared_ptr<Node<T, maxDegree> secondNode)
+{
+}
