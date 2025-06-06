@@ -41,27 +41,17 @@ Node<T, maxDegree>::Node(T data)
 template<typename T, uint8_t maxDegree>
 bool Node<T, maxDegree>::addNextNeighbor(std::shared_ptr<Node<T, maxDegree>> nextNeighbor)
 {
-    if (nextNeighbor == true) { return false; }
+    if (nextNeighbor == nullptr) { return false; }
 
     if (nextNeighbors.size() >= maxDegree) { return false; }
 
     std::vector<std::shared_ptr<Node<T, maxDegree>>>::iterator iter = nextNeighbors.end();
 
-    try
-    {
-        iter = std::find(nextNeighbors.begin(), nextNeighbors.end(), nextNeighbor);
-    }
-    catch(const std::exception& e)
-    {
-    }
+    iter = std::find(nextNeighbors.begin(), nextNeighbors.end(), nextNeighbor);
 
-    try
-    {
-        nextNeighbors.push_back(nextNeighbor);
-    }
-    catch(const std::exception& e)
-    {
-    }
+    if (iter == nextNeighbors.end()) { return false; }
+    
+    nextNeighbors.push_back(nextNeighbor);
 
     return true;
 }
@@ -76,13 +66,7 @@ void Node<T, maxDegree>::removeNeighbor(std::shared_ptr<Node<T, maxDegree>> next
 
     std::vector<std::shared_ptr<Node<T, maxDegree>>>::iterator iter = nextNeighbors.end();
 
-    try
-    {
-        iter = std::find(nextNeighbors.begin(), nextNeighbors.end(), nextNeighbor);
-    }
-    catch
-    {
-    }
+    iter = std::find(nextNeighbors.begin(), nextNeighbors.end(), nextNeighbor);
 
     if (iter != nextNeighbors.end()) { nextNeighbors.erase(iter) }
 }
