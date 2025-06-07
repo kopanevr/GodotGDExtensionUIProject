@@ -4,11 +4,16 @@
 
 ## ПРЕДИСЛОВИЕ
 
-Этот учебный проект предназначен для ознакомления с GDExtension API в игровом движке [Godot Engine](https://godotengine.org).
+Данный проект представляет собой пример реализации меню костомизации, вдохновленного интерфейсом из игры [Need for speed](https://store.steampowered.com/app/1262540/Need_for_Speed). В проекте используется GDExtension API для создания меню в игровом движке [Godot Engine](https://godotengine.org).
+
+|  |
+| :--: |
+| **Интерфейс меню костомизации Need for speed - [Источник](https://www.xboxracer.com/decorticage-du-trailer-gameplay-de-need-for-speed-a-l-e3-2015)** |
+| ![1](/doc/images/1.JPEG) |
 
 ## ОПИСАНИЕ
 
-Этот проект представляет собой GDExtension для [Godot Engine](https://godotengine.org), реализующий Heads-Up Display (HUD) для отображения игровых параметров. Расширение написано на C++ и использует Godot API для создания и управления пользовательским интерфейсом (UI), в частности для динамической визуализации данных игры.
+Этот проект представляет собой GDExtension для [Godot Engine](https://godotengine.org).
 
 **Результат работы**:
 
@@ -17,7 +22,7 @@
 |  |
 | :--: |
 | **** |
-| ![1](/doc/images/1.PNG) |
+| ![2](/doc/images/2.PNG) |
 
 |  |
 | :--: |
