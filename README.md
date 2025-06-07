@@ -4,17 +4,7 @@
 
 ## ПРЕДИСЛОВИЕ
 
-Данный проект представляет собой пример реализации меню кастомизации, вдохновленного интерфейсом из игры [Need for speed](https://store.steampowered.com/app/1262540/Need_for_Speed). В проекте используется GDExtension API для создания меню в игровом движке [Godot Engine](https://godotengine.org).
-
-|  |
-| :--: |
-| **Интерфейс меню кастомизации Need for speed 1 - [Источник](https://www.xboxracer.com/decorticage-du-trailer-gameplay-de-need-for-speed-a-l-e3-2015)** |
-| ![1](/doc/images/1.JPEG) |
-
-|  |
-| :--: |
-| **Интерфейс меню кастомизации Need for speed 2 - [Источник](https://www.xboxracer.com/decorticage-du-trailer-gameplay-de-need-for-speed-a-l-e3-2015)** |
-| ![2](/doc/images/2.JPEG) |
+Этот учебный проект предназначен для ознакомления с GDExtension API в игровом движке [Godot Engine](https://godotengine.org).
 
 ## ОПИСАНИЕ
 
