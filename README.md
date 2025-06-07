@@ -8,8 +8,13 @@
 
 |  |
 | :--: |
-| **Интерфейс меню кастомизации Need for speed - [Источник](https://www.xboxracer.com/decorticage-du-trailer-gameplay-de-need-for-speed-a-l-e3-2015)** |
+| **Интерфейс меню кастомизации Need for speed 1 - [Источник](https://www.xboxracer.com/decorticage-du-trailer-gameplay-de-need-for-speed-a-l-e3-2015)** |
 | ![1](/doc/images/1.JPEG) |
+
+|  |
+| :--: |
+| **Интерфейс меню кастомизации Need for speed 2 - [Источник](https://www.xboxracer.com/decorticage-du-trailer-gameplay-de-need-for-speed-a-l-e3-2015)** |
+| ![2](/doc/images/2.JPEG) |
 
 ## ОПИСАНИЕ
 
@@ -22,7 +27,7 @@
 |  |
 | :--: |
 | **** |
-| ![2](/doc/images/2.PNG) |
+| ![1](/doc/images/1.PNG) |
 
 |  |
 | :--: |
